@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    image: node:12.11.1-alpine
+    environment:
+      - PORT
+    ports:
+      - $PORT:$PORT
+    volumes:
+      - ./:/src
+    working_dir: /src
